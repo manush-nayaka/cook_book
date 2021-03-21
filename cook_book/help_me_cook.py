@@ -2,7 +2,6 @@ import requests
 import json
 import logging
 from flask import escape, request, render_template
-from utils import load_recipes
 from recipe import Recipe, Recipes
 from __init__ import app
 

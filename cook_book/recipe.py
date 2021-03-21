@@ -63,6 +63,7 @@ class Recipes:
     def get_recipe(self, recipe_name):
         recipe = redis_client.hgetall(self.__encode(recipe_name))
         recipe["instructions"] = recipe["instructions"].decode('utf-8')
+        recipe["name"] = recipe["name"].decode('utf-8')
         recipe["ingredients_list"] = set([each.decode('utf-8') for each in recipe["ingredients"].split(",")])  
         return recipe
 
