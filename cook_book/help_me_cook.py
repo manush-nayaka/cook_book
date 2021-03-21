@@ -58,5 +58,5 @@ if __name__ == "__main__":
     if app.debug:
         logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
     else:
-        logging.basicConfig(filename='example.log', format='%(levelname)s:%(message)s', level=logging.DEBUG)
+        logging.basicConfig(filename='log.txt', format='%(levelname)s:%(message)s', level=logging.DEBUG)
     app.run(host='0.0.0.0')
